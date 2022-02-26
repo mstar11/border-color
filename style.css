@@ -1,0 +1,134 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.wrapper {
+  width: 440px;
+  height: 340px;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  z-index: 6;
+  border-radius: 10px;
+
+  /* border:1px solid red; */
+}
+.container {
+  width: calc(440px - 80px);
+  height: calc(340px - 80px);
+  box-shadow: 3px 3px 15px 10px rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  position: absolute;
+  border-radius: 10px;
+  z-index: 1 !important;
+  background-color: #fff;
+}
+.container .header {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+.container .title {
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+.container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.email {
+  width: 80%;
+  height: 30px;
+  border-radius: 5px;
+  padding: 3px;
+  font-size: 1rem;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+.email:focus{
+        background-color:gray;
+        color:#fff;
+}
+.btn {
+  background-color: crimson;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: #fff;
+  padding: 0.8rem 3.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  opacity: 0.8;
+}
+.btn:hover {
+  opacity: 1;
+}
+.border_top,
+.border_bottom,
+.border_left,
+.border_right {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transform-origin: top left;
+  animation: rotateTop 8s linear infinite;
+}
+.border_top {
+  background-color: aqua;
+  transform: rotate(0deg);
+  animation-name: rotateTop;
+}
+@keyframes rotateTop {
+ to {
+         transform: rotate(360deg);
+
+ }
+}
+.border_right {
+        background-color:red;
+        transform: rotate(-90deg);
+        animation-name: rotateRight;
+      }
+      @keyframes rotateRight {
+       to {
+               transform: rotate(270deg);
+      
+       }
+      }
+      .border_left {
+        background-color:greenyellow;
+        transform: rotate(-180deg);
+        animation-name: rotateLeft;
+      }
+      @keyframes rotateLeft {
+       to {
+               transform: rotate(180deg);
+      
+       }
+      }
+      .border_bottom {
+        background-color:rgb(28, 117, 218);
+        transform: rotate(-270deg);
+        animation-name: rotateBottom;
+      }
+      @keyframes rotateBottom {
+       to {
+               transform: rotate(90deg);
+      
+       }
+      }
